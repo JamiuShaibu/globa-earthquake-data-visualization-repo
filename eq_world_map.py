@@ -13,6 +13,7 @@ with open(filename, 'r', encoding="utf8",) as f:
     all_eq_data = json.load(f)
 
 all_eq_dicts = all_eq_data['features']
+
 # print(len(all_eq_dicts))
 
 mags, lons, lats, hover_texts = [], [], [], []
@@ -25,7 +26,7 @@ for eq_dict in all_eq_dicts:
     lons.append(lon)
     lats.append(lat)
     hover_texts.append(location_or_title)
-print(mags)
+# print(mags)
 # Map the Earthquakes and customize marker sizes and colors.
 data = [{
     'type': 'scattergeo',
